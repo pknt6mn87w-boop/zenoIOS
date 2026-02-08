@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>安装我的应用</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .install-btn {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .steps {
+            text-align: left;
+            margin-top: 30px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .qr-code {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>📱 安装测试应用</h1>
+    <p>版本: 1.0.0 (Build 1)</p>
+    <p>更新时间: 2024-01-15</p>
+    
+    <div class="qr-code">
+        <!-- 可选：添加二维码 -->
+        <!-- <img src="qr-code.png" width="150" alt="安装二维码"> -->
+    </div>
+    
+    <a href="itms-services://?action=download-manifest&url=https://pknt6mn87w-boop.github.io/zenoIOS/manifest.plist" 
+       class="install-btn">
+        🔗 点击安装应用
+    </a>
+    
+    <div class="steps">
+        <h3>📋 安装说明：</h3>
+        <ol>
+            <li>点击上方按钮开始安装</li>
+            <li>弹出安装提示时，点击"安装"</li>
+            <li>返回桌面等待安装完成</li>
+            <li>首次安装需要信任证书：<br>
+                <strong>设置 → 通用 → VPN与设备管理/描述文件与设备管理</strong><br>
+                → 信任开发者证书
+            </li>
+        </ol>
+        
+        <h3>⚠️ 注意事项：</h3>
+        <ul>
+            <li>仅支持 iOS 12.0 及以上版本</li>
+            <li>需要测试设备 UDID 已加入证书</li>
+            <li>安装后请及时信任开发者证书</li>
+        </ul>
+    </div>
+    
+    <footer style="margin-top: 40px; color: #666; font-size: 14px;">
+        <p>仅供内部测试使用</p>
+    </footer>
+    
+    <!-- 可选：添加安装统计 -->
+    <script>
+        // 简单的点击统计
+        document.querySelector('.install-btn').addEventListener('click', function() {
+            console.log('用户点击安装按钮');
+        });
+    </script>
+</body>
+</html>
